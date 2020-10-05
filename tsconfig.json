@@ -15,6 +15,16 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngd-icons": [
+        "dist/ngd-icons/ngd-icons",
+        "dist/ngd-icons"
+      ],
+      "ngd-alert": [
+        "dist/ngd-alert/ngd-alert",
+        "dist/ngd-alert"
+      ]
+    }
   }
 }
