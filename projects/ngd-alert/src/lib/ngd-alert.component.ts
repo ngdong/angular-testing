@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { merge, Observable, Subject } from 'rxjs';
+import { Subject, merge, Observable } from 'rxjs';
 import { AlertMessage, NgdAlertService } from './ngd-alert.service';
 
 @Component({
@@ -19,6 +19,10 @@ export class NgdAlertComponent implements OnInit {
   constructor(private alertService: NgdAlertService) { }
 
   ngOnInit(): void {
+    this.initAlert();
+  }
+
+  initAlert() {
     this.alertMessage$ = merge(this.alertService.alertMessage$, this.close$);
   }
 
